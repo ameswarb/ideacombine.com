@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ideacombine.com</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700'
+          rel='stylesheet'
+          type='text/css'>
+  </head>
+  <body>
+    <div class="row logo">
+      <div class="small-10 small-offset-1 columns">
+        <%- partial('_penrose') %>
+      </div>
+    </div><!-- .logo -->
+    <div class="row nameplate">
+      <div class="small-12 medium-12 large-12 columns colorcycle">
+        <h1><span class="fade">idea</span>combine</h1>
+        <h2>consulting</h2>
+      </div>
+    </div><!-- .nameplate -->
+    <div class="row contact">
+      <form>
+        <div class="row">
+          <div class="small-3 medium-2 large-1 medium-offset-1 large-offset-3 columns">
+            <label class="colorcycle" for="name">Name</label>
+          </div>
+          <div class="small-9 medium-7 large-5 columns end">
+            <input type="text" name="name" id="name">
+          </div>
+        </div><!-- .row -->
+        <div class="row">
+          <div class="small-3 medium-2 large-1 medium-offset-1 large-offset-3 columns">
+            <label class="colorcycle" for="name">Email</label>
+          </div>
+          <div class="small-9 medium-7 large-5 columns end">
+            <input type="text" name="email" id="email">
+          </div>
+        </div><!-- .row -->
+        <div class="row">
+          <div class="small-3 medium-2 large-1 medium-offset-1 large-offset-3 columns">
+            <label class="colorcycle" for="comment">Comment</label>
+          </div>
+          <div class="small-9 medium-7 large-5 columns end">
+            <textarea name="comment"></textarea>
+          </div>
+        </div><!-- .row -->
+      </form>
+    </div><!-- .contact -->
+    <div class="row footer colorcycle">
+      &copy; <%= new Date().getFullYear() %> ideacombine | tel:
+      <a class="colorcycle" href="tel:9728631930">972.863.1930</a>
+    </div><!-- .footer -->
+  </body>
+</html>

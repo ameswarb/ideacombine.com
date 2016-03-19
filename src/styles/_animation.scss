@@ -1,0 +1,43 @@
+@keyframes colorAnim {
+  0% {
+    color: $pastel-blue;
+  }
+
+  25% {
+    color: $pastel-green;
+  }
+
+  50% {
+    color: $pastel-yellow;
+  }
+
+  75% {
+    color: $pastel-purple;
+  }
+
+  100% {
+    color: $pastel-blue;
+  }
+}
+
+@keyframes strokeAnim {
+  0% {
+    stroke: $pastel-blue;
+  }
+
+  25% {
+    stroke: $pastel-green;
+  }
+
+  50% {
+    stroke: $pastel-yellow;
+  }
+
+  75% {
+    stroke: $pastel-purple;
+  }
+
+  100% {
+    stroke: $pastel-blue;
+  }
+}
