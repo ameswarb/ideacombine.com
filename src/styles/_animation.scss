@@ -20,6 +20,28 @@
   }
 }
 
+@keyframes bgAnim {
+  0% {
+    background-color: $pastel-blue;
+  }
+
+  25% {
+    background-color: $pastel-green;
+  }
+
+  50% {
+    background-color: $pastel-yellow;
+  }
+
+  75% {
+    background-color: $pastel-purple;
+  }
+
+  100% {
+    background-color: $pastel-blue;
+  }
+}
+
 @keyframes strokeAnim {
   0% {
     stroke: $pastel-blue;
