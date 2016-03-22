@@ -20,14 +20,26 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 1.15em;
   font-weight: 300;
-  letter-spacing: 1.31em;
+  letter-spacing: 1.3em;
   line-height: 18px;
   margin: 0;
-  padding-left: 1.2em;
+  padding-left: 1.3em;
   text-align: center;
+  text-indent: 0;
   text-transform: uppercase;
+}
+
+// weird hack for webkit mobile letter spacing bug
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  h2,
+  h2.contact {
+    text-indent: -.5em;
+  }
 }
 
 @media #{$medium-up} {
@@ -64,15 +76,47 @@ h2 {
 
 @media #{$medium-up} {
   .logo svg {
-    margin-top: 60px;
+    margin: 60px auto 40px;
   }
 }
 
 .nameplate {
   text-align: center;
+
+  p {
+    color: $slate;
+    margin: 20px 10px 0;
+  }
+}
+
+@media #{$medium-up} {
+  .nameplate p {
+    margin: 20px 20% 0;
+  }
+}
+
+@media #{$large-up} {
+  .nameplate p {
+    margin: 20px 28% 0;
+  }
+}
+
+h2.contact {
+  margin: 20px auto -32px;
+}
+
+@media #{$medium-up} {
+  h2.contact {
+    font-size: 1.15em;
+    letter-spacing: 1.3em;
+    line-height: 18px;
+    padding-left: 1.2em;
+    text-indent: 1.3em;
+  }
 }
 
 .contact {
+
   form {
     margin: 40px 20px 0;
 
@@ -107,7 +151,7 @@ h2 {
   .butan {
     text-align: center;
 
-    a {
+    .submit {
       background-color: $light-grey;
       border-radius: 3px;
       color: $serious-navy;
@@ -117,9 +161,78 @@ h2 {
       &:hover {
         animation: bgAnim 4s infinite linear;
         color: $white;
-        text-shadow: 0px 0px 2px $white;
+        text-shadow: 0 0 2px $white;
       }
     }
+  }
+
+  .error.state {
+    color: $pastel-yellow;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 0 3%;
+    text-align: center;
+
+    a {
+      animation: none;
+      color: $pastel-yellow;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .message {
+      border: 1px solid darken($pastel-yellow, 15%);
+      border-radius: 3px;
+      padding-top: 16px;
+    }
+  }
+
+  &.success {
+    height: 100px; // 314
+    line-height: 100px;
+    margin: 107px auto;
+    text-align: center;
+    width: 90%;
+
+    em {
+      margin-right: 5px;
+    }
+
+    .message {
+      border: 1px solid darken($pastel-green, 15%);
+      border-radius: 3px;
+    }
+  }
+
+  &.loading {
+    height: 100px; // 314
+    line-height: 100px;
+    margin: 107px auto;
+    text-align: center;
+    width: 90%;
+
+    em {
+      margin-right: 5px;
+    }
+
+    .message {
+      border: 1px solid darken($pastel-green, 15%);
+      border-radius: 3px;
+    }
+  }
+
+  .validation.error {
+    color: $pastel-yellow;
+    display: none;
+    font-size: 14px;
+    margin: 0 0 20px 10px;
+  }
+
+  .is-invalid-input + .validation.error {
+    display: inline-block;
   }
 }
 

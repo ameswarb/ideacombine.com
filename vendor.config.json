@@ -1,4 +1,5 @@
 {
   "scripts": [
+    "foundation-sites/dist/foundation.min.js"
   ]
 }
